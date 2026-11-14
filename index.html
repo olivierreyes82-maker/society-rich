@@ -31,6 +31,20 @@
 /* Aplicar la animación a las secciones y tarjetas */
 section, .sec-head, .strip {
   animation: fadeInUp 0.8s ease-out forwards;
+}/* Aplicar la animación a las secciones y tarjetas */
+section, .sec-head, .strip {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Efecto de brillo pro en tarjetas al pasar el cursor o el dedo */
+.card, section .min, .strip .mini {
+  transition: all 0.3s ease;
+}
+
+.card:hover, section .min:hover, .strip .mini:hover {
+  transform: translateY(-5px);
+  border-color: #22e06b !important;
+  box-shadow: 0 0 20px rgba(34, 224, 107, 0.4);
 }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
