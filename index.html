@@ -766,7 +766,28 @@
       <div class="mini"><b>Soporte 24/7</b><span>Atención directa en cualquier horario.</span></div>
     </div>
   </section>
+<!-- SECCIÓN DE RESEÑAS -->
+<section style="max-width: 1000px; margin: 50px auto; padding: 20px; color: #fff;">
+  <h2 style="text-align: center; color: #22e06b; margin-bottom: 30px;">⭐ Lo que dice la raza</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+    
+    <div style="background: rgba(25,35,30,0.8); border: 1px solid #17332a; padding: 20px; border-radius: 10px;">
+      <p style="color: #bbb; font-style: italic;">"10 de 10 el servicio, el aimbot de precisión está más que optimizado. Caí de inmediato con el trato."</p>
+      <h4 style="color: #22e06b; margin-top: 15px;">- Carlos M.</h4>
+    </div>
 
+    <div style="background: rgba(25,35,30,0.8); border: 1px solid #17332a; padding: 20px; border-radius: 10px;">
+      <p style="color: #bbb; font-style: italic;">"Compré el pack de cielo mods y al chile la atención fue rápida. Súper recomendado."</p>
+      <h4 style="color: #22e06b; margin-top: 15px;">- Kevin R.</h4>
+    </div>
+
+    <div style="background: rgba(25,35,30,0.8); border: 1px solid #17332a; padding: 20px; border-radius: 10px;">
+      <p style="color: #bbb; font-style: italic;">"Excelente atención y los precios están accesibles. Sin duda volveré a hacer tratos."</p>
+      <h4 style="color: #22e06b; margin-top: 15px;">- Josué D.</h4>
+    </div>
+
+  </div>
+</section>
   <!-- ===== FAQ ===== -->
   <section id="faq" style="padding-top:0">
     <div class="sec-head">
@@ -964,5 +985,27 @@
   }
   document.getElementById('visitas-contador').textContent = localStorage.getItem('visitas_society');
 </script>
-</body>
+<!-- BOTÓN FLOTANTE DE MODO OSCURO / CLARO -->
+<button onclick="toggleDarkMode()" 
+        style="position: fixed; bottom: 25px; right: 25px; background: #17332a; color: #22e06b; border: 1px solid #22e06b; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 9999; cursor: pointer; transition: transform 0.3s ease;"
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"
+        title="Cambiar modo">
+   🌙
+</button>
+
+<script>
+  function toggleDarkMode() {
+    let body = document.body;
+    if (body.style.backgroundColor === 'rgb(240, 242, 245)') {
+      body.style.backgroundColor = '';
+      body.style.color = '';
+      event.currentTarget.textContent = '🌙';
+    } else {
+      body.style.backgroundColor = '#f0f2f5';
+      body.style.color = '#111111';
+      event.currentTarget.textContent = '☀️';
+    }
+  }
+</script></body>
 </html>
