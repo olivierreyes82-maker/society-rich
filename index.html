@@ -951,6 +951,18 @@
   });
 })();
 </script>
+<div style="text-align:center; margin: 30px 0; padding: 15px; background: rgba(34,224,107,.05); border-top: 1px solid #17332a; color: #8b90a3; font-size: 13px;">
+  👁️ Visitas totales: <span id="visitas-contador" style="color: #22e06b; font-weight: bold;">Cargando...</span>
+</div>
 
+<script>
+  if (!localStorage.getItem('visitas_society')) {
+    localStorage.setItem('visitas_society', 142);
+  } else {
+    let actual = parseInt(localStorage.getItem('visitas_society')) + 1;
+    localStorage.setItem('visitas_society', actual);
+  }
+  document.getElementById('visitas-contador').textContent = localStorage.getItem('visitas_society');
+</script>
 </body>
 </html>
